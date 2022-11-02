@@ -1,5 +1,4 @@
 import React from "react";
-import "./Card.css";
 
 const Card = (props) => {
   return (
@@ -12,11 +11,19 @@ const Card = (props) => {
         alt={props.name}
       ></img>
       <h2 className="animal-name">{props.name}</h2>
-      <div className="like">
-        <p className="like-number">♥{props.likes}</p>
-        <button className="like-button" onClick={props.addLikes}>
-          Like
-        </button>
+      <div className="like-section">
+        <span
+          className="material-symbols-outlined down"
+          onClick={props.removeLikes}
+        >
+          arrow_downward
+        </span>
+        <div className="like-number">
+          <p>♥{props.likes}</p>
+        </div>
+        <span className="material-symbols-outlined up" onClick={props.addLikes}>
+          arrow_upward
+        </span>
       </div>
     </div>
   );
