@@ -1,44 +1,25 @@
 import React from "react";
 import "./Card.css";
-import animals from "./animals.js";
 
-function Card(props) {
-  let result = animals.map((animal) => {
-    return (
-      <div className="animal">
-        <span className="close">x</span>
-        <img
-          src={`https://source.unsplash.com/500x400/?${animal.name}`}
-          alt="animal icon"
-          className="animal-icon"
-        ></img>
-        <h2 className="animal-name">{animal.name}</h2>
-        <div className="like">
-          <p className="like-number">♥{animal.likes}</p>
-          <button className="like-button" /* onClick={like} */>Like</button>
-        </div>
+const Card = (props) => {
+  return (
+    <div className="animal">
+      <button className="close" onClick={props.delete}>
+        x
+      </button>
+      <img
+        src={`https://source.unsplash.com/500x400/?${props.name}`}
+        alt={props.name}
+      ></img>
+      <h2 className="animal-name">{props.name}</h2>
+      <div className="like">
+        <p className="like-number">♥{props.likes}</p>
+        <button className="like-button" onClick={props.addLikes}>
+          Like
+        </button>
       </div>
-    );
-  });
-  return result;
-}
+    </div>
+  );
+};
 
 export default Card;
-
-{
-  /* <div className="animal">
-  <span className="close">x</span>
-  <img
-    src={`https://source.unsplash.com/500x400/?${animal.name}`}
-    alt="animal icon"
-    className="animal-icon"
-  ></img>
-  <h2 className="animal-name">{animal.name}</h2>
-  <div className="like">
-    <p className="like-number">Likes: {animal.likes}</p>
-    <button className="like-button" onClick={like}>
-      Add like
-    </button>
-  </div>
-</div>; */
-}
