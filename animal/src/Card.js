@@ -7,7 +7,7 @@ const Card = (props) => {
         x
       </button>
       <img
-        src={`https://source.unsplash.com/500x400/?${props.name}`}
+        src={`https://source.unsplash.com/500x400/?${props.name}-animal`}
         alt={props.name}
       ></img>
       <h2 className="animal-name">{props.name}</h2>
