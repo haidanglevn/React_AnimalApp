@@ -5,6 +5,50 @@
   color: #ffe900;
 }
 
+/* HOMEPAGE */
+.homepage {
+  padding: 0 15vw;
+}
+.page-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-nav-page:hover {
+  transform: scale(1.015, 1.015);
+}
+.page-nav h1 {
+  color: #ffe900;
+}
+.animal-home,
+.bird-home {
+  border-radius: 30px;
+  background-color: black;
+  margin: 2vw;
+  width: 80%;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.page-nav-title {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+
+.animal-home {
+  background-image: url("https://source.unsplash.com/500x400/?$animal");
+}
+
+.bird-home {
+  background-image: url("https://source.unsplash.com/500x400/?$bird");
+}
+
+/* ___________ */
 .title {
   padding: 20px;
 }
@@ -83,7 +127,7 @@ img {
 }
 .random {
   position: fixed;
-  top: 0;
+  top: 50px;
   right: 20px;
   font-size: 100px;
 }

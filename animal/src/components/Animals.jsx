@@ -1,9 +1,9 @@
-import "./App.css";
-import { Component } from "react";
-import Card from "./Card.js";
-import animals from "./animals.js";
+import React, { Component } from "react";
+import Card from "../Card";
+import animals from "../animalData";
+import NavBar from "./NavBar";
 
-class App extends Component {
+class Animals extends Component {
   state = {
     animals: animals,
     search: "",
@@ -74,8 +74,10 @@ class App extends Component {
         removeLikes={() => this.removeLikeHandler(animal.name)}
       />
     ));
+
     return (
       <div className="App">
+        <NavBar/>
         <h1 className="title">
           Presenting to you ... {animalsList.length} animals
         </h1>
@@ -97,4 +99,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Animals;
